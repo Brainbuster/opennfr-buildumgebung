@@ -1,0 +1,18 @@
+[submodule "opennfr-meta-openembedded"]
+	url = git://github.com/schleichdi2/opennfr-buildumgebung/opennfr-meta-openembedded
+[submodule "/meta-oe-alliance/meta-oe/recipes-oe-alliance/enigma2-plugins/e2openplugins"]
+	url = git://github.com/schleichdi2/opennfr-buildumgebung/meta-oe-alliance/meta-oe/recipes-oe-alliance/enigma2-plugins/e2openplugins
+[submodule "opennfr-openembedded-core"]
+	url = git://github.com/schleichdi2/opennfr-buildumgebung/opennfr-openembedded-core
+[submodule "bitbake"]
+	url = git://github.com/schleichdi2/opennfr-buildumgebung/bitbake
+[submodule "meta-oe-alliance"]
+	url = git://github.com/schleichdi2/opennfr-buildumgebung/meta-oe-alliance
+[submodule "/meta-oe-alliance/meta-brands"]
+	url = git://github.com/schleichdi2/opennfr-buildumgebung/meta-oe-alliance/meta-brands
+[submodule "/meta-oe-alliance/meta-oe"]
+	url = git://github.com/schleichdi2/opennfr-buildumgebung/meta-oe-alliance/meta-oe
+
+
+
+
