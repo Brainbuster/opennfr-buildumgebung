@@ -2,6 +2,7 @@ SUMMARY = "Linux kernel for ${MACHINE}"
 LICENSE = "GPLv2"
 SECTION = "kernel"
 KV = "3.13.5"
+PACKAGE_ARCH = "${MACHINE_ARCH}"
 
 inherit kernel machine_kernel_pr
 
@@ -16,6 +17,8 @@ KERNEL_CONFIG = "${@base_contains("MACHINE_FEATURES", "dvbproxy", "defconfig_pro
 
 SRC_URI = "http://archive.vuplus.com/download/kernel/stblinux-${KV}.tar.bz2 \
     file://${KERNEL_CONFIG} \
+    file://defconfig \
+    file://defconfig_proxy \
     file://rt2800usb_fix_warn_tx_status_timeout_to_dbg.patch \
     file://add-dmx-source-timecode.patch \
     file://af9015-output-full-range-SNR.patch \
@@ -46,12 +49,6 @@ KERNEL_IMAGETYPE = "vmlinux"
 KERNEL_IMAGEDEST = "/tmp"
 
 FILES_kernel-image = "${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}.gz"
-
-do_configure_prepend() {
-    if [ -e ${WORKDIR}/defconfig_proxy ]; then
-    mv ${WORKDIR}/defconfig_proxy ${WORKDIR}/defconfig
-    fi
-}
 
 kernel_do_install_append() {
     ${STRIP} ${D}${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}-${KERNEL_VERSION}

@@ -1,8 +1,10 @@
 SUMMARY = "Linux kernel for ${MACHINE}"
 SECTION = "kernel"
 LICENSE = "GPLv2"
+PACKAGE_ARCH = "${MACHINE_ARCH}"
+PR = "r5"
 
-inherit kernel machine_kernel_pr
+COMPATIBLE_MACHINE = "xp1000"
 
 KERNEL_RELEASE = "3.12.1"
 
@@ -39,8 +41,11 @@ SRC_URI += "http://www.xp-support.tv/support/linux/linux-${PV}-xp.tar.gz \
     file://0001-restore-minimal-amount-of-queueing.patch \
     "
 
-S = "${WORKDIR}/linux-${PV}"
 B = "${WORKDIR}/build"
+
+inherit kernel machine_kernel_pr
+
+S = "${WORKDIR}/linux-${PV}"
 
 export OS = "Linux"
 KERNEL_OBJECT_SUFFIX = "ko"

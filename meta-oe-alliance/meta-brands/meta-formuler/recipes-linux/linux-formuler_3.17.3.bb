@@ -1,8 +1,6 @@
-SUMMARY = "Linux kernel for ${MACHINE}"
+DESCRIPTION = "Linux kernel for ${MACHINE}"
 SECTION = "kernel"
 LICENSE = "GPLv2"
-
-inherit kernel machine_kernel_pr
 
 KERNEL_RELEASE = "3.17.3"
 
@@ -35,8 +33,11 @@ SRC_URI += "http://downloads.formuler.info/linux-${PV}.tar.gz \
 	file://tda18271-advertise-supported-delsys.patch \
 	"
 
-S = "${WORKDIR}/linux-${PV}"
 B = "${WORKDIR}/build"
+
+inherit kernel machine_kernel_pr
+
+S = "${WORKDIR}/linux-${PV}"
 
 export OS = "Linux"
 KERNEL_OBJECT_SUFFIX = "ko"

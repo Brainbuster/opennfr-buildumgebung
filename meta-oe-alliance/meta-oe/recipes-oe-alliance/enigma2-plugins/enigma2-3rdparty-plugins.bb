@@ -11,7 +11,7 @@ DEPENDS = "tslib mpfr gmp"
 SRCREV = "${AUTOREV}"
 PV = "2.1+gitr${SRCPV}"
 PKGV = "2.1+gitr${GITPKGV}"
-PR = "r172"
+PR = "r164"
 
 SRC_URI="git://github.com/oe-alliance/3rdparty-plugins.git;protocol=git"
 
@@ -31,14 +31,14 @@ THIRDPARTY_PLUGINS = " \
     enigma2-plugin-extensions-sundtekcontrolcenter_1.4.0-20140223-r3_all.ipk \
     enigma2-plugin-systemplugins-extnumberzap_1.0-rc12_mipsel.ipk \
     enigma2-plugin-extensions-atmolightd_0.7-pre22_all.ipk \
-    enigma2-plugin-extensions-autobouquets-e2_20150428r1_all.ipk \
+    enigma2-plugin-extensions-autobouquets-e2_20141113r1_mips32el.ipk \
     enigma2-plugin-extensions-bildonline_3.1rc6_mips32el.ipk \
     enigma2-plugin-extensions-bluray_1.5c2_mips32el.ipk \
     enigma2-plugin-extensions-boblight-enigma2_0.8r7_mips32el.ipk \
     enigma2-plugin-extensions-camofs_8.73_all.ipk \
     enigma2-plugin-extensions-chefkoch_1.4c4_mips32el.ipk \
     enigma2-plugin-extensions-clevertanken_0.5rc1_mips32el.ipk \
-    enigma2-plugin-extensions-csfd_10-10-20150103_all.ipk \
+    enigma2-plugin-extensions-csfd_10-60-20150309_all.ipk \
     enigma2-plugin-extensions-cyrussettings_1.0.0_all.ipk \
     enigma2-plugin-extensions-digitalfernsehen_1.1rc2_mips32el.ipk \
     enigma2-plugin-extensions-enigmalight_0.2-rc1_all.ipk \
@@ -65,11 +65,11 @@ THIRDPARTY_PLUGINS = " \
     enigma2-plugin-extensions-mtv_0.1_mips32el.ipk \
     enigma2-plugin-extensions-muzutv_1.5rc4_mips32el.ipk \
     enigma2-plugin-extensions-navibar_1.1.1_all.ipk \
-    ${@base_contains('MACHINE_BRAND', 'Vu+', '' , 'enigma2-plugin-extensions-openopera_1.0-r0_mips32el.ipk', d)} \
+    enigma2-plugin-extensions-openopera_1.0-r0_mips32el.ipk \
     enigma2-plugin-extensions-opkg-tools_1.3_mipsel.ipk \
     enigma2-plugin-extensions-oscamstatusview_0.5rc3_mips32el.ipk \
     enigma2-plugin-extensions-piconmanager_2.1-20150216-r2_all.ipk \
-    enigma2-plugin-extensions-picturecenterfs_6.07_all.ipk \
+    enigma2-plugin-extensions-picturecenterfs_6.05_all.ipk \
     enigma2-plugin-extensions-planerfs_6.51_all.ipk \
     enigma2-plugin-extensions-pluginspanel_1.0_r01_all.ipk \
     enigma2-plugin-extensions-radiode_0.1_mips32el.ipk \
@@ -90,13 +90,13 @@ THIRDPARTY_PLUGINS = " \
     enigma2-plugin-extensions-tmbd_6.1_mipsel.ipk \
     enigma2-plugin-extensions-translator_0.9rc3_mips32el.ipk \
     enigma2-plugin-extensions-transmission_2.83_mips32el.ipk \
-    enigma2-plugin-extensions-tsmedia_9.5_all.ipk \
+    enigma2-plugin-extensions-tsmedia_9.4_all.ipk \
     enigma2-plugin-extensions-tvspielfilm_6.3rc7_mips32el.ipk \
     enigma2-plugin-extensions-verkehrsinfo_1.0rc2_mips32el.ipk \
     enigma2-plugin-extensions-vhannibalautosettings_1.1_mips32el.ipk \
     enigma2-plugin-extensions-vuplusforum_0.7rc3_mips32el.ipk \
     enigma2-plugin-extensions-webmedia_10.0_r02_oe2.0_all.ipk \
-    enigma2-plugin-extensions-webradiofs_13.09_all.ipk \
+    enigma2-plugin-extensions-webradiofs_13.03_all.ipk \
     enigma2-plugin-extensions-wikipedia_2.2rc5_mips32el.ipk \
     enigma2-plugin-extensions-wwech_1.01_all.ipk \
     enigma2-plugin-extensions-xbmcaddons_8.1_r0_all.ipk \
@@ -105,22 +105,22 @@ THIRDPARTY_PLUGINS = " \
     enigma2-plugin-extensions-zdfnewmediathek_1.7rc5_mips32el.ipk \
     enigma2-plugin-systemplugins-bouquetsprotection_0.2-rc1_all.ipk \
     enigma2-plugin-systemplugins-recordinfobar_1.0-rc15_mipsel.ipk \
-    enigma2-plugin-picons-100x60.black-white_2015-04-24--11-52-32_all \
-    enigma2-plugin-picons-100x60.blue-black_2015-04-24--11-52-32_all \
-    enigma2-plugin-picons-100x60.reflection-black_2015-04-24--11-52-32_all \
-    enigma2-plugin-picons-100x60.transparent-black_2015-04-24--11-52-32_all \
-    enigma2-plugin-picons-100x60.transparent-white_2015-04-24--11-52-32_all \
-    enigma2-plugin-picons-100x60.white-black_2015-04-24--11-52-32_all \
-    enigma2-plugin-picons-220x132.black-white_2015-04-24--11-52-32_all \
-    enigma2-plugin-picons-220x132.blue-black_2015-04-24--11-52-32_all \
-    enigma2-plugin-picons-220x132.reflection-black_2015-04-24--11-52-32_all \
-    enigma2-plugin-picons-220x132.transparent-black_2015-04-24--11-52-32_all \
-    enigma2-plugin-picons-220x132.transparent-black-nopadding_2015-04-24--11-52-32_all \
-    enigma2-plugin-picons-220x132.transparent-white_2015-04-24--11-52-32_all \
-    enigma2-plugin-picons-220x132.transparent-white-nopadding_2015-04-24--11-52-32_all \
-    enigma2-plugin-picons-220x132.white-black_2015-04-24--11-52-32_all \
-    enigma2-plugin-picons-400x240.transparent-white-nopadding_2015-04-24--11-52-32_all \
-    "
+    enigma2-plugin-picons-100x60.black-white_2015-04-24--11-52-32_all.ipk \
+    enigma2-plugin-picons-100x60.blue-black_2015-04-24--11-52-32_all.ipk \
+    enigma2-plugin-picons-100x60.reflection-black_2015-04-24--11-52-32_all.ipk \
+    enigma2-plugin-picons-100x60.transparent-black_2015-04-24--11-52-32_all.ipk \
+    enigma2-plugin-picons-100x60.transparent-white_2015-04-24--11-52-32_all.ipk \
+    enigma2-plugin-picons-100x60.white-black_2015-04-24--11-52-32_all.ipk \
+    enigma2-plugin-picons-220x132.black-white_2015-04-24--11-52-32_all.ipk \
+    enigma2-plugin-picons-220x132.blue-black_2015-04-24--11-52-32_all.ipk \
+    enigma2-plugin-picons-220x132.reflection-black_2015-04-24--11-52-32_all.ipk \
+    enigma2-plugin-picons-220x132.transparent-black_2015-04-24--11-52-32_all.ipk \
+    enigma2-plugin-picons-220x132.transparent-black-nopadding_2015-04-24--11-52-32_all.ipk \
+    enigma2-plugin-picons-220x132.transparent-white_2015-04-24--11-52-32_all.ipk \
+    enigma2-plugin-picons-220x132.transparent-white-nopadding_2015-04-24--11-52-32_all.ipk \
+    enigma2-plugin-picons-220x132.white-black_2015-04-24--11-52-32_all.ipk \
+    enigma2-plugin-picons-400x240.transparent-white-nopadding_2015-04-24--11-52-32_all.ipk \
+   "
 
 #     Install any packages t_append =hat are only For this machines feed here, uncomment the line below and change as required
 THIRDPARTY_MACHINE_PLUGINS_vuuno = " \
@@ -191,14 +191,13 @@ THIRDPARTY_MACHINE_PLUGINS_inihde = " \
     "
 THIRDPARTY_MACHINE_PLUGINS_inihde2 = " \
     enigma2-plugin-extensions-hbbtv_1.1-INI_mips32el.ipk \
-    "
-
-do_install[noexec] = "1"
-do_package_write_ipk[noexec] = "1"
+    "    
+    
+do_install() {
+}
 
 python populate_packages_prepend () {
-    pkg  = ""
-    pkgs = ""
+    p = ""
     plugins = bb.data.getVar('THIRDPARTY_PLUGINS', d, 1)
     if bb.data.getVar('THIRDPARTY_MACHINE_PLUGINS', d, 1) is not None:
         plugins += bb.data.getVar('THIRDPARTY_MACHINE_PLUGINS', d, 1)
@@ -207,11 +206,9 @@ python populate_packages_prepend () {
 
     if plugins is not None:
         for package in plugins.split():
-            pkg = package.split('_')[0]
-            pkgs += pkg + " "
-            bb.data.setVar('ALLOW_EMPTY_' + pkg, '1', d)
+            p += package.split('_')[0] + " "
 
-    bb.data.setVar('PACKAGES', pkgs, d)
+    bb.data.setVar('PACKAGES', p, d)
 }
 
 do_deploy() {

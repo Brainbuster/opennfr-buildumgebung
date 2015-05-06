@@ -17,12 +17,13 @@ MACHINE_ESSENTIAL_EXTRA_RRECOMMENDS = "\
 MACHINE_EXTRA_RRECOMMENDS = " \
     vuplus-shutdown \
     gstreamer1.0-plugin-dvbmediasink \
-    gstreamer1.0-libav \
+    gst-ffmpeg \
+    ${@base_contains('DISTRO_FEATURES', 'audioeffect', 'enigma2-plugin-systemplugins-audioeffect' , '', d)} \
     "
 
 include conf/machine/include/autoload-filesystems.inc
 
-DVBMEDIASINK_CONFIG = "--with-pcm --with-eac3 --with-amr --with-wmv"
+DVBMEDIASINK_CONFIG = "--with-amr --with-wmv --with-pcm --with-eac3"
 
 TARGET_ARCH = "mipsel"
 DEFAULTTUNE = "mips32el"
@@ -52,7 +53,7 @@ IMAGE_CMD_ubi_prepend = " \
     rm -rf ${IMAGE_ROOTFS}/tmp/*; \
     "
 
-MACHINE_FEATURES += "3dtv alsa hdmicec switchoff bootsplash omb"
+MACHINE_FEATURES += "3dtv alsa hdmicec switchoff wifi bootsplash omb"
 
 BOOTLOGO_FILENAME = "splash_cfe_auto.bin"
 

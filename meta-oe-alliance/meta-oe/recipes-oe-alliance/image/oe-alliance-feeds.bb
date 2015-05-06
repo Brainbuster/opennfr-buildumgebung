@@ -9,7 +9,7 @@ ALLOW_EMPTY_${PN} = "1"
 PACKAGES = "${PN}"
 
 PV = "1.0"
-PR = "r59"
+PR = "r55"
 
 DEPENDS = "enigma2-plugin-drivers-usbserial"
 RECOMMENDS = "enigma2-plugin-extensions-et-livestream"
@@ -39,9 +39,6 @@ RDEPENDS_${PN} = " \
     enigma2-plugin-extensions-et-portal \
     enigma2-plugin-extensions-moviearchiver \
     enigma2-plugin-extensions-yahooweather \
-    ${@base_contains("MACHINE_FEATURES", "omb", "enigma2-plugin-extensions-openmultiboot", "", d)} \
-    ${@base_contains("MACHINE_FEATURES", "omb", "openmultiboot", "", d)} \
-    ${@base_contains("MACHINE_FEATURES", "xbmc", "enigma2-plugin-extensions-xbmc", "", d)} \
     \
     ${@base_contains("MACHINE_FEATURES", "fullgraphiclcd", "lcdpicons-enigma2-meta" , "", d)} \
     \
@@ -54,7 +51,7 @@ RDEPENDS_${PN} = " \
     dosfstools \
     dvbsnoop \
     dvdfs \
-    ${@base_contains("MACHINE_FEATURES", "legacykernel", "" , "evtest strace", d)} \
+    ${@base_contains("MACHINE_FEATURES", "legacykernel", "" , "evtest", d)} \
     exfat-utils \
     fuse-exfat \
     gdb \
@@ -86,6 +83,7 @@ RDEPENDS_${PN} = " \
     smartmontools \
     smbnetfs \
     sshpass \
+    strace \
     tcpdump \
     transmission \
     ushare \
@@ -96,7 +94,6 @@ RDEPENDS_${PN} = " \
     ofgwrite \
     idle3-tools \
     pngquant \
-    streamproxy \
     "
 
 RRECOMMENDS_${PN}_append_vuuno = "enigma2-plugin-extensions-hbbtv"
@@ -105,4 +102,3 @@ RRECOMMENDS_${PN}_append_vusolo = "enigma2-plugin-extensions-hbbtv"
 RRECOMMENDS_${PN}_append_vusolo2 = "enigma2-plugin-extensions-hbbtv"
 RRECOMMENDS_${PN}_append_vuduo = "enigma2-plugin-extensions-hbbtv"
 RRECOMMENDS_${PN}_append_vuduo2 = "enigma2-plugin-extensions-hbbtv"
-RRECOMMENDS_${PN}_append_vuzero = "enigma2-plugin-extensions-hbbtv"

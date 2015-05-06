@@ -119,9 +119,3 @@ python populate_packages_prepend() {
     for package in bb.data.getVar('PACKAGES', d, 1).split():
         getControlLines(mydir, d, package.split('-'))
 }
-
-pkg_preinst_enigma2-plugin-extensions-webinterface() {
-#!/bin/sh
-rm -rf /usr/lib/enigma2/python/Plugins/Extensions/WebInterface
-exit 0
-}

@@ -11,7 +11,7 @@ PR = "r39"
 
 inherit packagegroup
 
-DEPENDS = "opennfr-feeds"
+DEPENDS = "opennfr-feeds opennfr-3rdparty-plugins 3rd-party-feed-configs"
 
 RDEPENDS_${PN} = "\
         enigma2-plugin-extensions-autotimer \
@@ -20,16 +20,15 @@ RDEPENDS_${PN} = "\
 	enigma2-plugin-extensions-cutlisteditor \
 	enigma2-plugin-extensions-menusort \
 	enigma2-plugin-extensions-customsubservices \
-	enigma2-plugin-webinterface-nfrmod \
 	enigma2-plugin-extensions-infopanel \
 	enigma2-plugin-extensions-nfr4xboot \	
-	enigma2-plugin-extensions-bmediacenter \
 	enigma2-plugin-extensions-imdb \
 	\
 	enigma2-plugin-systemplugins-fastscan \
 	enigma2-plugin-systemplugins-softwaremanager \
 	enigma2-plugin-systemplugins-hotplug \
 	${@base_contains("MACHINE_FEATURES", "videoenhancement", "", "enigma2-plugin-systemplugins-videoenhancement", d)} \
+        ${@base_contains("MACHINE_FEATURES", "uianimation", "enigma2-plugin-systemplugins-animationsetup" , "", d)} \
 	\
 	enigma2-plugin-skins-utopia-hd \
 	opennfr-base-files \

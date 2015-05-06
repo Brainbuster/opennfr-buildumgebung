@@ -20,4 +20,3 @@ S = "${WORKDIR}/${SRCNAME}-${PV}"
 inherit setuptools
 
 include python-package-split.inc
-
