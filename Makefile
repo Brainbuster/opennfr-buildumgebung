@@ -178,12 +178,12 @@ brands=entwopia
 endif
 
 BBLAYERS ?= \
-	$(CURDIR)/meta-openembedded/meta-oe \
-	$(CURDIR)/meta-openembedded/meta-multimedia \
-	$(CURDIR)/meta-openembedded/meta-networking \
-	$(CURDIR)/meta-openembedded/meta-filesystems \
-	$(CURDIR)/meta-openembedded/meta-python \
-	$(CURDIR)/openembedded-core/meta \
+	$(CURDIR)/opennfr-meta-openembedded/meta-oe \
+	$(CURDIR)/opennfr-meta-openembedded/meta-multimedia \
+	$(CURDIR)/opennfr-meta-openembedded/meta-networking \
+	$(CURDIR)/opennfr-meta-openembedded/meta-filesystems \
+	$(CURDIR)/opennfr-meta-openembedded/meta-python \
+	$(CURDIR)/opennfr-openembedded-core/meta \
 	$(CURDIR)/meta-oe-alliance/meta-oe \
 	$(CURDIR)/meta-oe-alliance/meta-brands/meta-$(brands) \
 
