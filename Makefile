@@ -458,7 +458,7 @@ $(TOPDIR)/env.source: $(DEPDIR)/.env.source.$(BITBAKE_ENV_HASH)
 	@echo 'export MACHINE' >> $@
 	@echo 'export DISTRO' >> $@
 	@echo 'export MACHINEBUILD' >> $@
-	@echo 'export PATH=$(CURDIR)/openembedded-core/scripts:$(CURDIR)/bitbake/bin:$${PATH}' >> $@
+	@echo 'export PATH=$(CURDIR)/opennfr-openembedded-core/scripts:$(CURDIR)/bitbake/bin:$${PATH}' >> $@
 
 $(DISTRO)_CONF_HASH := $(call hash, \
 	'$(DISTRO)_CONF_VERSION = "1"' \
